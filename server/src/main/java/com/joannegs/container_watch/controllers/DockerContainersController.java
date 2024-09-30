@@ -29,6 +29,11 @@ public class DockerContainersController {
         dockerService.startContainer(id);
     }
 
+    @GetMapping("/{id}/stop")
+    public void stopContainer (@PathVariable String id) {
+        dockerService.stopContainer(id);
+    }
+
     @DeleteMapping("/{id}")
     public void deleteContainer(@PathVariable String id) {
         dockerService.deleteContainer(id);
