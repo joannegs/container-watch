@@ -24,12 +24,12 @@ public class DockerContainersController {
         return this.dockerService.listContainers(showAll);
     }
 
-    @GetMapping("/{id}/start")
+    @PostMapping("/{id}/start")
     public void startContainer (@PathVariable String id) {
         dockerService.startContainer(id);
     }
 
-    @GetMapping("/{id}/stop")
+    @PostMapping("/{id}/stop")
     public void stopContainer (@PathVariable String id) {
         dockerService.stopContainer(id);
     }
